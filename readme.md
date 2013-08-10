@@ -27,7 +27,8 @@ client.once( 'connection.success', function connected( client ) {
     if( error ) {
       console.log( 'Error while fetching classifications: %s.', error.message );
     } else {
-      console.log( 'Fetched %d classifications, keys: %s.', Object.keys( meta.data ).length, Object.keys( meta.data ) );
+      console.log( 'Fetched %d classifications.', Object.keys( meta.data ).length );
+      console.log( 'Classification keys: %s.', Object.keys( meta.data ) );
     }
 
   });
