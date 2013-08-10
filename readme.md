@@ -40,6 +40,12 @@ client.once( 'connection.error', function connection_error( error, client ) {
 });
 ```
 
+If there are no errors, the above code should result in the following console messages:
+
+ - Connected to RETS as "Ricky Bobby, Inc.".
+ - Fetched 6 classifications.
+ - Classification keys: REN,CML,MUL,LND,CMS,RES.
+
 ## License
 
 (The MIT License)

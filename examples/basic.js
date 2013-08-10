@@ -16,7 +16,7 @@ var client = RETS.createConnection({
 
 // Trigger on successful connection.
 client.once( 'connection.success', function connected( client ) {
-  console.log( 'Connected to RETS as %s.', client.get( 'provider.name' ) )
+  console.log( 'Connected to RETS as "%s".', client.get( 'provider.name' ) )
 
   // Fetch classifications
   client.get_classifications( function have_meta( error, meta ) {
@@ -24,7 +24,8 @@ client.once( 'connection.success', function connected( client ) {
     if( error ) {
       console.log( 'Error while fetching classifications: %s.', error.message );
     } else {
-      console.log( 'Fetched %d classifications, keys: %s.', Object.keys( meta.data ).length, Object.keys( meta.data ) );
+      console.log( 'Fetched %d classifications.', Object.keys( meta.data ).length );
+      console.log( 'Classification keys: %s.', Object.keys( meta.data ) );
     }
 
   });
